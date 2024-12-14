@@ -43,3 +43,15 @@ function yesButton() {
   const payment = document.querySelector(".modal");
   payment.style.display = "flex"
 }
+
+
+document.getElementById('copyButton').addEventListener('click', function() {
+  navigator.clipboard.writeText('7085948512')
+    .then(() => {
+      console.log('Text copied to clipboard');
+      alert('Text copied to clipboard!');
+    })
+    .catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+});
